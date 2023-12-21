@@ -1,0 +1,44 @@
+@use "variables";
+
+// RTL mixin
+@mixin rtl($root-level: false) {
+    @if ($root-level) {
+        html.rtl,
+        body[dir='rtl'] {
+            @content;
+        }
+    } @else {
+        html.rtl &,
+        body[dir='rtl'] & {
+            @content;
+        }
+    }
+}
+
+
+// LTR mixin
+@mixin ltr($root-level: false) {
+    @if ($root-level) {
+        html.ltr,
+        body[dir='ltr'] {
+            @content;
+        }
+    } @else {
+        html.ltr &,
+        body[dir='ltr'] & {
+            @content;
+        }
+    }
+}
+
+// Responsive mixin
+@mixin respond-to($name) {
+    @if(map-has-key($breakpoints, $name)) {
+        @media (min-width: #{inspect(map-get($breakpoints, $name))}) {
+            @content;
+        }
+    }
+    @else {
+        @warn('invalid breakpoint name');
+    }
+}

@@ -1,0 +1,34 @@
+@import "src/styles/index";
+
+$grid-columns: 24;
+$grid-gutter: 16px;
+
+.col {
+    position: relative;
+
+    &--center {
+        display: flex;
+        flex-direction: revert;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@mixin col-generator($bp) {
+    @for $col from 1 through $grid-columns {
+        .col-#{$bp}-#{$col} {
+            flex-basis: percentage($col / $grid-columns);
+            max-width: percentage($col / $grid-columns);
+            padding: 0 calc($grid-gutter / 2);
+            margin-bottom: $grid-gutter;
+            box-sizing: border-box;
+        }
+    }
+}
+
+@include col-generator('xs');
+@include respond-to('sm') { @include col-generator('sm'); }
+@include respond-to('md') { @include col-generator('md'); }
+@include respond-to('lg') { @include col-generator('lg'); }
+@include respond-to('xl') { @include col-generator('xl'); }
+@include respond-to('xxl') { @include col-generator('xxl'); }

@@ -1,0 +1,51 @@
+@import 'src/styles/index.scss';
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: px-to-rem(16);
+    transform: translateY(-50%);
+    z-index: 100;
+
+    > nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: px-to-rem(8);
+        background-color: #C7BBB3;
+        border-radius: 8px;
+
+        > a {
+            padding: 8px;
+            font-size: px-to-rem(16);
+            cursor: pointer;
+            color: #342627;
+            transition: all 0.12s ease-in-out;
+            width: px-to-rem(24);
+            height: px-to-rem(24);
+
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+
+            &:hover {
+                cursor: pointer;
+                color: #C14234;
+                background-color: darken(#C7BBB3, 5%);
+                border-radius: 4px;
+            }
+
+            &.active {
+                cursor: pointer;
+                color: lighten(#C14234, 10%);
+                background-color: darken(#C7BBB3,5%);
+                border-radius: 4px;
+            }
+        }
+    }
+}

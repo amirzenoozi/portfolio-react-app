@@ -1,0 +1,19 @@
+@import '../../styles/index';
+
+.error {
+    padding: px-to-rem(15px);
+    background-color: #c7bbb3;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #342627;
+    text-align: center;
+
+    a {
+        color: #c14234;
+        text-decoration: none;
+        font-weight: bold;
+    }
+}

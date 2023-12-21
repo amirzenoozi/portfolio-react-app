@@ -1,0 +1,90 @@
+@import "src/styles/index";
+$baseClass: 'hyperlink';
+
+.#{$baseClass} {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: px-to-rem(10) px-to-rem(20);
+    height: px-to-rem(50);
+    border-radius: px-to-rem(8);
+    box-shadow: inherit;
+    border: 1px solid transparent;
+    font-size: px-to-rem(18);
+    cursor: pointer;
+    background-color: transparent;
+    transition: all 0.12s ease-in-out;
+    white-space: nowrap;
+    box-sizing: border-box;
+
+    &--prepend {
+        > span {
+            margin-right: px-to-rem(10);
+        }
+    }
+    &--append {
+        > span {
+            margin-left: px-to-rem(10);
+        }
+    }
+    &--disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+    &--icon {
+        width: px-to-rem(50);
+        height: px-to-rem(50);
+        > span {
+            margin: 0;
+        }
+
+        &:hover {
+            border-radius: 100%;
+        }
+    }
+
+
+    &--primary-dark {
+        background-color: #c14234;
+        color: #c7bbb3;
+
+        &:not(.#{$baseClass}--disabled):hover {
+            background-color: darken(#c14234, 10%);
+            color: darken(#c7bbb3, 10%);
+        }
+    }
+    &--primary-light {
+        background-color: #c7bbb3;
+        color: #342627;
+
+        &:not(.#{$baseClass}--disabled):hover {
+            background-color: darken(#c7bbb3, 10%);
+            color: lighten(#342627, 10%);
+        }
+    }
+    &--linear-light {
+        border-color: #c7bbb3;
+        border-style: solid;
+        color: #c7bbb3;
+
+        &:not(.#{$baseClass}--disabled):hover {
+            border-color: darken(#c7bbb3, 10%);
+            color: darken(#c7bbb3, 10%);
+        }
+    }
+    &--ghost-dark {
+        color: #342627;
+
+        &:not(.#{$baseClass}--disabled):hover {
+            color: lighten(#342627, 10%);
+        }
+    }
+    &--ghost-light {
+        color: #c7bbb3;
+
+        &:not(.#{$baseClass}--disabled):hover {
+            color: darken(#c7bbb3, 10%);
+        }
+    }
+}

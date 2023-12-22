@@ -17,7 +17,7 @@
         justify-content: space-between;
         align-items: center;
         padding: px-to-rem(8);
-        background-color: #C7BBB3;
+        background-color: darken(#C7BBB3, 5%);
         border-radius: 8px;
 
         > a {
@@ -36,14 +36,14 @@
             &:hover {
                 cursor: pointer;
                 color: #C14234;
-                background-color: darken(#C7BBB3, 5%);
+                background-color: darken(#C7BBB3, 10%);
                 border-radius: 4px;
             }
 
             &.active {
                 cursor: pointer;
                 color: lighten(#C14234, 10%);
-                background-color: darken(#C7BBB3,5%);
+                background-color: darken(#C7BBB3,10%);
                 border-radius: 4px;
             }
         }

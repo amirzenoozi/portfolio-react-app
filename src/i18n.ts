@@ -8,7 +8,7 @@ i18n.use(Backend)
 		{
 			lng: 'en',
 			fallbackLng: ['en', 'fa'],
-			debug: true,
+			debug: false,
 			ns: ['common', 'home', 'experience'],
 			defaultNS: 'common',
 			interpolation: {

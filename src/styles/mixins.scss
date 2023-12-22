@@ -34,7 +34,7 @@
 // Responsive mixin
 @mixin respond-to($name) {
     @if(map-has-key($breakpoints, $name)) {
-        @media (min-width: #{inspect(map-get($breakpoints, $name))}) {
+        @media only screen and (min-width: #{inspect(map-get($breakpoints, $name))}) {
             @content;
         }
     }

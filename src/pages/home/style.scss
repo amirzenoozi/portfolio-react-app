@@ -9,7 +9,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    padding-bottom: px-to-rem(200);
+    padding-bottom: px-to-rem(100);
     box-sizing: border-box;
     overflow: hidden;
 
@@ -108,5 +108,9 @@
             top: -75vw;
             left: 4vw;
         }
+    }
+
+    @include respond-to(md) {
+        padding-bottom: px-to-rem(200);
     }
 }

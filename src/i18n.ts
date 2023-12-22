@@ -9,7 +9,7 @@ i18n.use(Backend)
 			lng: 'en',
 			fallbackLng: ['en', 'fa'],
 			debug: true,
-			ns: ['common', 'home'],
+			ns: ['common', 'home', 'experience'],
 			defaultNS: 'common',
 			interpolation: {
 				escapeValue: false,

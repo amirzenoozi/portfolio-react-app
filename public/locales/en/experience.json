@@ -1,0 +1,48 @@
+{
+    "hi": "Hi, I'm",
+    "cloud": {
+        "0" : "Promoted a self-testing culture by enhancing the preparation of convention documents and encouraging developers to write more tests,resulting in a 10% increase (from 5% to 15%).",
+        "1" : "Reinforced automation culture by using different integration scripts including nightly build and versioning scripts to prevent human errors.",
+        "2" : "Successfully set up the visual player editor in less than 7 days. This is a required objective for 2 e-learning enterprise customers.",
+        "3" : "Designed and developed a Hook service as an owner to broadcast the events to our 100 customers in the first phase by using Docker, RabbitMQ, and Python, VueJs and contract with 6 valuable enterprise customers.",
+        "4" : "Lead a front-end chapter of 10 members across 6 products, overseeing the implementation of VueJs applications using micro front-end architecture.",
+        "5" : "Developed a tag-based recommendation system to have a smarter platform for nearly 100 customers in the first phase with NodeJS & Python.",
+        "6" : "Streamlined translation management in 6 VueJs apps by creating a simple React dashboard and facilitating file transfers to the VueJs application during CI jobs.",
+        "7" : "Created 2 custom data visualization components for VueJS from the scratch with SVG and JavaScript and 5 custom form fields."
+    },
+    "sensifai": {
+        "0": "Enhanced a multi-language Angular application as a playing area for our customers that helped them to see 6 different AI models outputs.",
+        "1": "Created a React application that let users manage an Intruder detection system by drawing lines and polygons on CCTV frames and managing more than 6 cameras.",
+        "2": "Established a React application that let users check the recognized faces from the 5 CCTVs in real-time and apply filters on them locally.",
+        "3": "Managed all the logged license plates (10 logs per second) in real-time and apply filters on them locally with React application.",
+        "4": "Coded a socket service without any 3rd party library to boost the response time. it reduced nearly 350ms in time response average.",
+        "5": "Programmed a browser-side face detection that helps administrators to define a new face in face recognition service by using TensorflowJs.",
+        "6": "Implement 3 websites with WordPress from scratch and use Elementor as a page-builder for 2 different branches.",
+        "7": "Set up a React application that let administrators check the alarms visually and managed 5 different types of sensors and devices."
+    },
+    "garousian": {
+        "0": "Programmed several creative and pixel-perfect static websites for customers by using HTML, SCSS, Gulp, and ES6.",
+        "1": "Replace SetTimeout with RequestAnimationFrom in the existing landing pages and increase the performance by almost 20 percent.",
+        "2": "Set up 5 WordPress custom themes for our customers and used Elementor as a primary page-builder to have easier management.",
+        "3": "Implemented a cinematic Q&A game for the Yalda promotions event that was supported in 4 different browsers.",
+        "4": "Developed a custom print-style for 2 websites that want to have a better view after printing the pages."
+    },
+    "noxowl": {
+        "0": "Developed real-time location monitoring to monitor the employees who used our applications with GoogleMap SDK and OpenStreetMap.",
+        "1": "Coded an Angular application with nearly 10 custom complex components and Pipes.",
+        "2": "Designed and developed custom form-filed components as an Angular component.",
+        "3": "Integrated with push notifications services to update the users in real-time with Socket.",
+        "4": "Used RestAPI and GraphQL API at the same time to read the data."
+    },
+    "ivahid": {
+        "0" : "Developed several creative and pixel-perfect static websites for customers by using HTML, SCSS, Gulp, and ES6.",
+        "1" : "Coded 7 multi-language and SEO-friendly themes for our international customers.",
+        "2" : "Made a project template with SCSS and gulp to boost the coding speed.",
+        "3" : "Implemented a SpriteSVG gulp watcher to prevent using font-icons."
+    },
+    "rabin": {
+        "0" : "Developed a pure JavaScript application for Samsung TV based on Tizen OS.",
+        "1" : "Integrated With Samsung SmartThings API to control the devices.",
+        "2" : "Set up JwPlayer for the video player and integrated with the Samsung TV remote control."
+    }
+}

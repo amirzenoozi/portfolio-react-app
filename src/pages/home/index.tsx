@@ -17,7 +17,7 @@ import ChartJs from '../../icons/ChartJs';
 import Notification from '../../icons/Notification';
 import VueJs from '../../icons/VueJs';
 import Gulp from '../../icons/Gulp';
-import Webpack from '../../icons/Webpack';
+import WebpackIcon from '../../icons/WebpackIcon';
 import Flask from '../../icons/Flask';
 import ExpressJs from '../../icons/ExpressJs';
 import FastAPI from '../../icons/FastAPI';
@@ -27,14 +27,14 @@ import MariaDB from '../../icons/MariaDB';
 import Elementor from '../../icons/Elementor';
 import MongoDB from '../../icons/MongoDB';
 import Icon from '@icon-park/react/es/all';
-import links from '../../constants/links.json';
-import './style.scss';
 import Selenium from '../../icons/Selenium';
 import UnitTest from '../../icons/UnitTest';
-import Jest from '../../icons/Jest';
+import JestIcon from '../../icons/JestIcon';
 import Docker from '../../icons/Docker';
 import GitLab from '../../icons/GitLab';
-import Actions from '../../icons/Actions';
+import ActionsIcon from '../../icons/ActionsIcon';
+import links from '../../constants/links.json';
+import './style.scss';
 
 
 interface Experience {
@@ -177,7 +177,7 @@ function Home() {
 				},
 				{
 					title: 'Webpack',
-					icon: <Webpack size={skillsIconSize} />,
+					icon: <WebpackIcon size={skillsIconSize} />,
 				}
 			]
 		},
@@ -227,7 +227,7 @@ function Home() {
 				},
 				{
 					title: 'Jest',
-					icon: <Jest size={skillsIconSize} />,
+					icon: <JestIcon size={skillsIconSize} />,
 				},
 			]
 		},
@@ -244,7 +244,7 @@ function Home() {
 				},
 				{
 					title: 'Actions',
-					icon: <Actions size={skillsIconSize} />,
+					icon: <ActionsIcon size={skillsIconSize} />,
 				},
 			]
 		}

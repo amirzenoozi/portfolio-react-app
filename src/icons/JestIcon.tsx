@@ -1,10 +1,7 @@
 import React from 'react';
+import { IconInterface } from './Icon.interface';
 
-interface IconProps {
-	size?: number;
-}
-
-const Jest: React.FC<IconProps> = ({size = 24}) => {
+const JestIcon: React.FC<IconInterface> = ({size = 24}) => {
 	return (
 		<span className='i-icon'>
 			<svg xmlns="http://www.w3.org/2000/svg"  viewBox={'0 0 24 24'} width={size} height={size} fill="none">
@@ -14,4 +11,4 @@ const Jest: React.FC<IconProps> = ({size = 24}) => {
 	);
 }
 
-export default Jest;
+export default JestIcon;

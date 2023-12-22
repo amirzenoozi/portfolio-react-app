@@ -1,10 +1,7 @@
 import React from 'react';
+import { IconInterface } from './Icon.interface';
 
-interface IconProps {
-	size?: number;
-}
-
-const ReactJs: React.FC<IconProps> = ({size = 24}) => {
+const ReactJs: React.FC<IconInterface> = ({size = 24}) => {
 	return (
 		<span className='i-icon'>
 			<svg xmlns="http://www.w3.org/2000/svg"  viewBox={'0 0 48 48'} width={size} height={size} fill="none">

@@ -1,8 +1,10 @@
 # Portfolio React App
 
+
+![](https://github.com/amirzenoozi/portfolio-react-app/blob/main/intro.jpg)
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-This project let you to have a simple portfolio website which is responsive and easy to use.
-You can add your own skills and experiences.
+This project lets you have a simple portfolio website that is responsive and easy to use.
+You can add your skills and experiences.
 
 ## Run the project
 In the project directory, you can run:

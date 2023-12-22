@@ -27,7 +27,7 @@ function Home() {
 	const sensifaiObjectives: Array<string> = new Array(7).fill(0).map((item, index) => t(`sensifai.${index}`));
 	const garousianObjectives: Array<string> = new Array(5).fill(0).map((item, index) => t(`garousian.${index}`));
 	const noxowlObjectives: Array<string> = new Array(5).fill(0).map((item, index) => t(`noxowl.${index}`));
-	const iVahidObjectives: Array<string> = new Array(5).fill(0).map((item, index) => t(`ivahid.${index}`));
+	const iVahidObjectives: Array<string> = new Array(4).fill(0).map((item, index) => t(`ivahid.${index}`));
 	const rabinObjectives: Array<string> = new Array(3).fill(0).map((item, index) => t(`rabin.${index}`));
 
 	const experiencesList: Array<Experience> = [
@@ -190,7 +190,7 @@ function Home() {
 								<p>{ item.date }</p>
 							</div>
 							<ul>
-								{cloudObjectives.map((objective: string, index: number) => (
+								{item.objectives.map((objective: string, index: number) => (
 									<li className={'experience-objective'} key={`${item.translation_key}_${index}`}>
 										<Icon type={'Dot'} theme={'outline'} size={24} />
 										<p>{objective}</p>

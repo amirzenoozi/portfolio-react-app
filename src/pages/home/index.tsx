@@ -107,6 +107,16 @@ function Home() {
 								</p>
 								<div className={'hero-actions'}>
 									<Hyperlink
+										variant={'primary-light'}
+										to={links["social"]["resume"]}
+										target="_blank"
+										data-tooltip-id="tooltip-area"
+										data-tooltip-content="LinkedIn"
+										data-tooltip-place="bottom"
+									>
+										<Icon type={'DownloadTwo'} size={24} /> Download CV
+									</Hyperlink>
+									<Hyperlink
 										icon={true}
 										variant={'linear-light'}
 										to={links["social"]["linkedin"]}

@@ -7,16 +7,23 @@ FROM node:18-alpine
 WORKDIR /app
 
 # Copy the package.json file.
-COPY package.json .
+COPY package.json yarn.lock ./
 
 # Install application dependencies.
-RUN yarn install
+RUN yarn install --production
 
-# Copy the rest of the application files.
+# Install serve node package.
+RUN yarn global add serve
+
+# Bundle app source
 COPY . .
+
+# Build the application.
+RUN yarn build
 
 # Expose the port.
 EXPOSE 3000
 
 # Run the application.
-CMD ["yarn", "start"]
+CMD ["serve", "-s", "build", "-l", "3000"]
+

@@ -4,6 +4,7 @@ import Home from './pages/home';
 import Error from './pages/error';
 import Layout from './pages/layout';
 import Skills from './pages/skills';
+import Gallery from './pages/gallery';
 import reportWebVitals from './reportWebVitals';
 import AnimatedCursor from 'react-animated-cursor';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
@@ -24,6 +25,11 @@ const router = createBrowserRouter([
             {
                 path: "/skills",
                 element: <Skills />,
+                errorElement: <Error />,
+            },
+            {
+                path: "/gallery",
+                element: <Gallery />,
                 errorElement: <Error />,
             },
         ],

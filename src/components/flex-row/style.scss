@@ -6,4 +6,8 @@ $grid-gutter: 16px;
     flex-direction: row;
     margin: 0 (- calc($grid-gutter / 2)) (-$grid-gutter);
     width: 100%;
+
+    &--stretch {
+        align-items: stretch;
+    }
 }

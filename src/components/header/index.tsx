@@ -2,13 +2,17 @@ import React from 'react';
 import './style.scss';
 import { NavLink } from 'react-router-dom';
 import Icon from '@icon-park/react/es/all';
+import { useSelector } from 'react-redux';
+import { RootState } from '@/store';
 
 const Header = () => {
+	const currentLanguage = useSelector((state: RootState) => state.uiSettings.currentLanguage);
+
 	return (
 		<header className={'header'}>
 			<nav>
 				<NavLink
-					to={'/'}
+					to={`/${currentLanguage}`}
 					className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : "" }
 					data-tooltip-id="tooltip-area"
 					data-tooltip-content="Home"
@@ -17,7 +21,7 @@ const Header = () => {
 					<Icon type={'Home'} theme={'outline'} size={24} />
 				</NavLink>
 				<NavLink
-					to={'/skills'}
+					to={`/${currentLanguage}/skills`}
 					className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : "" }
 					data-tooltip-id="tooltip-area"
 					data-tooltip-content="Skills"

@@ -12,6 +12,7 @@ const Header = () => {
 		<header className={'header'}>
 			<nav>
 				<NavLink
+					end={true}
 					to={`/${currentLanguage}`}
 					className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : "" }
 					data-tooltip-id="tooltip-area"
@@ -21,6 +22,7 @@ const Header = () => {
 					<Icon type={'Home'} theme={'outline'} size={24} />
 				</NavLink>
 				<NavLink
+					end={true}
 					to={`/${currentLanguage}/skills`}
 					className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : "" }
 					data-tooltip-id="tooltip-area"

@@ -29,10 +29,12 @@ import JestIcon from '@/icons/JestIcon';
 import Docker from '@/icons/Docker';
 import GitLab from '@/icons/GitLab';
 import ActionsIcon from '@/icons/ActionsIcon';
+import { ClassNames } from '@/modules/classNames';
 import './style.scss';
 
 
 function Skills() {
+	const CN = new ClassNames('skill');
 	const skillsIconSize: number = 80;
 	const skillsList: Array<any> = [
 		{
@@ -172,18 +174,18 @@ function Skills() {
 
 	return (
 		<>
-			<section className={'skill'}>
-				<span className={'skill-circle skill-circle--one'} />
-				<span className={'skill-circle skill-circle--two'} />
+			<section className={CN.generate()}>
+				<span className={CN.generate('circle', ['one'])} />
+				<span className={CN.generate('circle', ['two'])} />
 				<Container>
 					{skillsList.map((section: any) => (
-						<div className={'skill-section'}>
+						<div className={CN.generate('section')}>
 							<h2>{section.title}:</h2>
 							<FlexRow>
 								{section.items.map((item: any) => (
 									<FlexCol xs={12} sm={8} md={6} lg={4} xl={3}>
-										<div className={'skill-item'}>
-											<div className={'skill-content'}>
+										<div className={CN.generate('item')}>
+											<div className={CN.generate('content')}>
 												{item.icon}
 												<p>{item.title}</p>
 											</div>

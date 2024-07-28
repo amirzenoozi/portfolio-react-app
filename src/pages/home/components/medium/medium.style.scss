@@ -1,0 +1,67 @@
+@import '../../../../styles/index';
+
+.links {
+    position: relative;
+    background-color: #342627;
+    padding: px-to-rem(50) px-to-rem(20);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    overflow: hidden;
+    color: #c7bbb3;
+
+    &-item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: px-to-rem(16);
+        background-color: #433535;
+        border-radius: px-to-rem(8);
+        height: 100%;
+        box-sizing: border-box;
+
+        > figure {
+            position: relative;
+            overflow: hidden;
+            border-radius: px-to-rem(8);
+            font-size: 0;
+            margin-bottom: px-to-rem(8);
+            width: 100%;
+            padding-top: 56.24%;
+            background-color: rgba(0, 0, 0, 0.2);
+
+            > img {
+                display: block;
+                height: 100%;
+                width: auto;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        > h3 {
+            font-size: px-to-rem(18);
+            font-weight: 700;
+            margin-bottom: px-to-rem(8);
+            margin-top: 0;
+        }
+        > p {
+            overflow: hidden;
+            line-height: 1.2;
+            font-size: px-to-rem(14);
+            height: px-to-rem(16.9 * 4);
+            text-align: justify;
+            text-align-last: left;
+            margin-top: auto;
+        }
+    }
+
+    @include respond-to(md) {
+        padding: px-to-rem(50);
+    }
+}

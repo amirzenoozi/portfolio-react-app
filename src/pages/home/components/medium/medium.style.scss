@@ -1,6 +1,6 @@
 @import '../../../../styles/index';
 
-.links {
+.medium {
     position: relative;
     background-color: #342627;
     padding: px-to-rem(50) px-to-rem(20);
@@ -12,7 +12,7 @@
     overflow: hidden;
     color: #c7bbb3;
 
-    &-item {
+    &__card {
         position: relative;
         display: flex;
         flex-direction: column;

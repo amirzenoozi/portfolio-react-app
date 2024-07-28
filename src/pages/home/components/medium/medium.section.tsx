@@ -4,10 +4,12 @@ import FlexRow from '../../../../components/flex-row';
 import FlexCol from '../../../../components/flex-col';
 import { MediumCard } from './medium.interface';
 import './medium.style.scss';
+import { ClassNames } from '../../../../modules/classNames';
 
 
 
 function MediumSection() {
+	const CN = new ClassNames('medium');
 	const blogNewsList: Array<MediumCard> = [
 		{
 			link: 'https://amirzenoozi.medium.com/top-5-hr-interview-questions-answers-4bba93a21c8e',
@@ -41,7 +43,7 @@ function MediumSection() {
 		}
 	]
 	return (
-		<section className={'links'}>
+		<section className={CN.generate('')}>
 			<Container>
 				<FlexRow stretch={true}>
 					{blogNewsList.map((item: MediumCard) => (
@@ -52,7 +54,7 @@ function MediumSection() {
 							xl={6}
 						>
 							<a
-								className={'links-item'}
+								className={CN.generate('card')}
 								href={item.link}
 								target={'_blank'}
 								rel="noreferrer"

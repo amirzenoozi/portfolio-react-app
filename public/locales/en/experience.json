@@ -1,15 +1,15 @@
 {
     "hi": "Hi, I'm",
     "cloud": {
-        "0" : "Led a front-end chapter of 10 members across 6 products, implementing VueJs applications.",
-        "1" : "Inspired developers to enhance productivity by improving documentation conventions, resulting in a 10% increase in the writing of tests.",
-        "2" : "Developed and designed a hook service using Python, MariaDB, RabbitMQ and Docker to broadcast events to +2000 users.",
-        "3" : "Implemented a live video transcript service for our media platform powered by OpenAI, GitLab CI, Python, and NestJS.",
-        "4" : "Developed Translation Management system using React, Redux, MongoDB, and Cloud Object Storage.",
-        "5" : "As part of our internal UiKit, I developed several complex components.",
-        "6" : "Enhanced automation culture by implementing versioning scripts and nightly builds.",
-        "7" : "Created 2 custom data visualization components for VueJS from scratch with SVG and JavaScript and 5 custom form fields.",
-        "8: : "Developed a Cloud Architecture Design Tool using Canvas."
+        "0": "Led a front-end chapter of 10 members across 6 products, implementing VueJs applications.",
+        "1": "Inspired developers to enhance productivity by improving documentation conventions, resulting in a 10% increase in the writing of tests.",
+        "2": "Developed and designed a hook service using Python, MariaDB, RabbitMQ, and Docker to broadcast events to +2000 users.",
+        "3": "Implemented a live video transcript service for our media platform powered by OpenAI, GitLab CI, Python, and NestJS.",
+        "4": "Developed Translation Management system using React, Redux, MongoDB, and Cloud Object Storage.",
+        "5": "As part of our internal UiKit, I developed several complex components.",
+        "6": "Enhanced automation culture by implementing versioning scripts and nightly builds.",
+        "7": "Created 2 custom data visualization components for VueJS from scratch with SVG and JavaScript and 5 custom form fields.",
+        "8": "Developed a Cloud Architecture Design Tool using Canvas."
     },
     "sensifai": {
         "0": "Enhanced a multi-language Angular application as a playing area for our customers that helped them to see 6 different AI models outputs.",

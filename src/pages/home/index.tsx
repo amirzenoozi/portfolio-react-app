@@ -39,7 +39,7 @@ function Home() {
 
 	const experiencesList: Array<Experience> = [
 		{
-			title: 'Cloud Company',
+			title: 'Arvan Cloud Co.',
 			type: 'Hybrid',
 			position: 'Senior JavaScript Engineer',
 			location: 'Tehran, Iran',

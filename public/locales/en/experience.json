@@ -1,24 +1,25 @@
 {
     "hi": "Hi, I'm",
     "cloud": {
-        "0" : "Promoted a self-testing culture by enhancing the preparation of convention documents and encouraging developers to write more tests,resulting in a 10% increase (from 5% to 15%).",
-        "1" : "Reinforced automation culture by using different integration scripts including nightly build and versioning scripts to prevent human errors.",
-        "2" : "Successfully set up the visual player editor in less than 7 days. This is a required objective for 2 e-learning enterprise customers.",
-        "3" : "Designed and developed a Hook service as an owner to broadcast the events to our 100 customers in the first phase by using Docker, RabbitMQ, and Python, VueJs and contract with 6 valuable enterprise customers.",
-        "4" : "Lead a front-end chapter of 10 members across 6 products, overseeing the implementation of VueJs applications using micro front-end architecture.",
-        "5" : "Developed a tag-based recommendation system to have a smarter platform for nearly 100 customers in the first phase with NodeJS & Python.",
-        "6" : "Streamlined translation management in 6 VueJs apps by creating a simple React dashboard and facilitating file transfers to the VueJs application during CI jobs.",
-        "7" : "Created 2 custom data visualization components for VueJS from the scratch with SVG and JavaScript and 5 custom form fields."
+        "0" : "Led a front-end chapter of 10 members across 6 products, implementing VueJs applications.",
+        "1" : "Inspired developers to enhance productivity by improving documentation conventions, resulting in a 10% increase in the writing of tests.",
+        "2" : "Developed and designed a hook service using Python, MariaDB, RabbitMQ and Docker to broadcast events to +2000 users.",
+        "3" : "Implemented a live video transcript service for our media platform powered by OpenAI, GitLab CI, Python, and NestJS.",
+        "4" : "Developed Translation Management system using React, Redux, MongoDB, and Cloud Object Storage.",
+        "5" : "As part of our internal UiKit, I developed several complex components.",
+        "6" : "Enhanced automation culture by implementing versioning scripts and nightly builds.",
+        "7" : "Created 2 custom data visualization components for VueJS from scratch with SVG and JavaScript and 5 custom form fields.",
+        "8: : "Developed a Cloud Architecture Design Tool using Canvas."
     },
     "sensifai": {
         "0": "Enhanced a multi-language Angular application as a playing area for our customers that helped them to see 6 different AI models outputs.",
         "1": "Created a React application that let users manage an Intruder detection system by drawing lines and polygons on CCTV frames and managing more than 6 cameras.",
-        "2": "Established a React application that let users check the recognized faces from the 5 CCTVs in real-time and apply filters on them locally.",
-        "3": "Managed all the logged license plates (10 logs per second) in real-time and apply filters on them locally with React application.",
+        "2": "Established a React application that lets users check the recognized faces from the 5 CCTVs in real-time and apply filters on them locally.",
+        "3": "Managed all the logged license plates (10 logs per second) in real-time and applied filters on them locally with React application.",
         "4": "Coded a socket service without any 3rd party library to boost the response time. it reduced nearly 350ms in time response average.",
         "5": "Programmed a browser-side face detection that helps administrators to define a new face in face recognition service by using TensorflowJs.",
         "6": "Implement 3 websites with WordPress from scratch and use Elementor as a page-builder for 2 different branches.",
-        "7": "Set up a React application that let administrators check the alarms visually and managed 5 different types of sensors and devices."
+        "7": "Set up a React application that lets administrators check the alarms visually and manage 5 different types of sensors and devices."
     },
     "garousian": {
         "0": "Programmed several creative and pixel-perfect static websites for customers by using HTML, SCSS, Gulp, and ES6.",
@@ -43,6 +44,6 @@
     "rabin": {
         "0" : "Developed a pure JavaScript application for Samsung TV based on Tizen OS.",
         "1" : "Integrated With Samsung SmartThings API to control the devices.",
-        "2" : "Set up JwPlayer for the video player and integrated with the Samsung TV remote control."
+        "2" : "Set up JwPlayer for the video player and integrate it with the Samsung TV remote control."
     }
 }

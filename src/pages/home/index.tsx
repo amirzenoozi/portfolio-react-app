@@ -1,14 +1,10 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Container from '../../components/container';
-import FlexCol from '../../components/flex-col';
-import FlexRow from '../../components/flex-row';
-import Hyperlink from '../../components/hyperlink';
-import Linkedin from '../../icons/linkedin';
 import Icon from '@icon-park/react/es/all';
-import links from '../../constants/links.json';
+import HeroSection from './components/hero/hero.section';
+import MediumSection from './components/medium/medium.section';
 import './style.scss';
-
 
 interface Experience {
 	title: string;
@@ -18,13 +14,6 @@ interface Experience {
 	date: string;
 	translation_key: string;
 	objectives: string[];
-}
-
-interface News {
-	title: string;
-	image: string;
-	description: string;
-	link: string;
 }
 
 
@@ -93,126 +82,10 @@ function Home() {
 			objectives: rabinObjectives,
 		}
 	];
-	const blogNewsList: Array<News> = [
-		{
-			link: 'https://amirzenoozi.medium.com/top-5-hr-interview-questions-answers-4bba93a21c8e',
-			title: 'Top 5 HR Interview Questions + Answers',
-			image: 'https://miro.medium.com/v2/resize:fit:720/format:webp/1*JtmuKA63Rk4pLKTiIZ0yTg.jpeg',
-			description: 'If you are actively seeking a new job position, this Medium article is a must-read. Often, your first interview will be a brief meeting with the HR team. In this initial interaction, there are no definitive right or wrong answers, but it’s crucial to respond honestly and align your answers with the company’s values and expectations. As a result, this can be the most challenging interview compared to others in the hiring process.',
-		},
-		{
-			link: 'https://amirzenoozi.medium.com/decoding-persian-news-unleashing-the-power-of-analytics-86868be4756b',
-			title: 'Decoding Persian News: Unleashing the Power of Analytics',
-			image: 'https://miro.medium.com/v2/resize:fit:720/format:webp/1*GBCVi-VCviTgc_9oT5Wy8Q.jpeg',
-			description: 'Welcome to an exciting journey where we explore Persian News through the lens of analytics. Join me as we dive into the world of news analysis and uncover meaningful insights using charts and numbers. In this exploration, we aim to shed light on Persian News stories by harnessing the power of data visualization and quantitative analysis.',
-		},
-		{
-			link: 'https://amirzenoozi.medium.com/make-a-simple-url-shortener-app-with-node-js-express-js-rest-api-5cce40413d2b',
-			title: 'Make a Simple URL Shortener app with Node.js & Express.js + Rest API',
-			image: 'https://miro.medium.com/v2/resize:fit:720/format:webp/1*L3tLt-PRP6hs--1oiq6Fbg.png',
-			description: 'Have you ever thought to learn a Node.js ? Trying out simple projects such as ToDoApps & WeathersApp will help you learn new things quickly so I decided to create a simple URL shortener with Node.js & Express.js and become familiar with Node.js Applications.',
-		},
-		{
-			link: 'https://amirzenoozi.medium.com/how-to-have-angular-environment-structure-in-react-applications-without-cra-e970443e9068',
-			title: 'How To Have Angular Environment Structure in React Applications Without CRA',
-			image: 'https://miro.medium.com/v2/resize:fit:720/format:webp/1*ctW9S9Y5nAAqL7a45Dk4AA.png',
-			description: 'If you have an experience with Angular you are familiar with the environment structure in this project I think it’s so cool to have a different environment value in development and production mode in React applications so I decide to use this structure in React applications.',
-		},
-		{
-			link: 'https://amirzenoozi.medium.com/find-dominant-common-color-with-telegram-bot-b5bfad2b8fe8',
-			title: 'Find Dominant Common Color With Telegram Bot',
-			image: 'https://miro.medium.com/v2/resize:fit:720/format:webp/1*WH1Kyb4Ixpf8JnJpWf8bzg.jpeg',
-			description: 'In the last few days, I decided to play with the telegram bot but I need to have a simple scenario for my application so I think “finding the most common colors” can be the best choice for me.',
-		}
-	]
 
 	return (
 		<>
-			<section className={'hero'}>
-				<span className={'hero-circle hero-circle--one'} />
-				<span className={'hero-circle hero-circle--two'} />
-				<Container>
-					<FlexRow>
-						<FlexCol xs={24} sm={24} md={18}>
-							<div className={'hero-content'}>
-								<h1>Hi, 👋🏻<br/> <i>I'm</i> Amirhossein</h1>
-								<p>
-									Experienced working as a front-end developer in several software development companies
-									in Iran for more than 7 years. Worked on
-									many successful projects and collaborated with many technical teams. Curious about new
-									software technologies and eager about
-									learning them. Making an automated process in a large-scale team is my second
-									superpower.
-								</p>
-								<div className={'hero-actions'}>
-									<Hyperlink
-										variant={'primary-light'}
-										to={links["social"]["resume"]}
-										target="_blank"
-										data-tooltip-id="tooltip-area"
-										data-tooltip-content="LinkedIn"
-										data-tooltip-place="bottom"
-									>
-										<Icon type={'DownloadTwo'} size={24} /> Download CV
-									</Hyperlink>
-									<Hyperlink
-										icon={true}
-										variant={'linear-light'}
-										to={links["social"]["linkedin"]}
-										target="_blank"
-										data-tooltip-id="tooltip-area"
-										data-tooltip-content="LinkedIn"
-										data-tooltip-place="bottom"
-									>
-										<Linkedin size={24} />
-									</Hyperlink>
-									<Hyperlink
-										icon={true}
-										variant={'linear-light'}
-										to={links["social"]["github"]}
-										target="_blank"
-										data-tooltip-id="tooltip-area"
-										data-tooltip-content="Github"
-										data-tooltip-place="bottom"
-									>
-										<Icon type="Github" theme="filled" size={24} />
-									</Hyperlink>
-									<Hyperlink
-										icon={true}
-										variant={'linear-light'}
-										to={links["social"]["dribble"]}
-										target="_blank"
-										data-tooltip-id="tooltip-area"
-										data-tooltip-content="Dribble"
-										data-tooltip-place="bottom"
-									>
-										<Icon type="Dribble" theme="filled" size={24} />
-									</Hyperlink>
-									<Hyperlink
-										icon={true}
-										variant={'linear-light'}
-										to={links["social"]["behance"]}
-										target="_blank"
-										data-tooltip-id="tooltip-area"
-										data-tooltip-content="Behance"
-										data-tooltip-place="bottom"
-									>
-										<Icon type="Behance" theme="filled" size={24} />
-									</Hyperlink>
-								</div>
-							</div>
-						</FlexCol>
-						<FlexCol xs={24} sm={24} md={6} center={true}>
-							<div className={'hero-image'}>
-								<figure>
-									<img src={'Hero.jpg'} alt="Amirhossein Douzandeh"/>
-								</figure>
-							</div>
-						</FlexCol>
-					</FlexRow>
-				</Container>
-				<span className={'hero-mouse'}/>
-			</section>
+			<HeroSection />
 			<section className={'experience'}>
 				<span className={'experience-circle experience-circle--one'} />
 				<span className={'experience-circle experience-circle--two'} />
@@ -240,33 +113,7 @@ function Home() {
 					))}
 				</Container>
 			</section>
-			<section className={'links'}>
-				<Container>
-					<FlexRow stretch={true}>
-						{blogNewsList.map((item: News) => (
-							<FlexCol
-								xs={24}
-								sm={12}
-								md={8}
-								xl={6}
-							>
-								<a
-									className={'links-item'}
-									href={item.link}
-									target={'_blank'}
-									rel="noreferrer"
-								>
-									<figure>
-										<img src={item.image} alt={item.title} />
-									</figure>
-									<h3>{item.title}</h3>
-									<p>{item.description}</p>
-								</a>
-							</FlexCol>
-						))}
-					</FlexRow>
-				</Container>
-			</section>
+			<MediumSection />
 		</>
 	);
 }

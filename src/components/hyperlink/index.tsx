@@ -1,5 +1,5 @@
 import React from 'react';
-import Icon, {IconType} from '@icon-park/react/es/all';
+import {IconType} from '@icon-park/react/es/all';
 import './style.scss';
 
 interface HyperlinkProps {

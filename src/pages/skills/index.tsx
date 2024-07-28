@@ -1,5 +1,4 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 import Container from '../../components/container';
 import FlexCol from '../../components/flex-col';
 import FlexRow from '../../components/flex-row';

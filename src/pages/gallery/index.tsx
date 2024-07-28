@@ -1,5 +1,4 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 import Container from '../../components/container';
 import PhotoAlbum from 'react-photo-album';
 import './style.scss';

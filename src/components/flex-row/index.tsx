@@ -9,7 +9,7 @@ const FlexRow: React.FC<FlexRowProps> = ({ stretch = false, children }) => {
 
 
 	return (
-		<div className={['row', stretch && 'row--stretch', CN.generate('', [stretch ? ('stretch') : ''])].join(' ')}>
+		<div className={CN.generate('', [...stretch ? ['stretch'] : []])}>
 			{ children }
 		</div>
 	);

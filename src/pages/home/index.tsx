@@ -41,7 +41,7 @@ function Home() {
 		{
 			title: 'Cloud Company',
 			type: 'Hybrid',
-			position: 'Senior Front-End Developer',
+			position: 'Senior JavaScript Engineer',
 			location: 'Tehran, Iran',
 			date: 'Sep. 2021 - Present',
 			translation_key: 'cloud',
@@ -94,6 +94,12 @@ function Home() {
 		}
 	];
 	const blogNewsList: Array<News> = [
+		{
+			link: 'https://amirzenoozi.medium.com/top-5-hr-interview-questions-answers-4bba93a21c8e',
+			title: 'Top 5 HR Interview Questions + Answers',
+			image: 'https://miro.medium.com/v2/resize:fit:720/format:webp/1*JtmuKA63Rk4pLKTiIZ0yTg.jpeg',
+			description: 'If you are actively seeking a new job position, this Medium article is a must-read. Often, your first interview will be a brief meeting with the HR team. In this initial interaction, there are no definitive right or wrong answers, but it’s crucial to respond honestly and align your answers with the company’s values and expectations. As a result, this can be the most challenging interview compared to others in the hiring process.',
+		},
 		{
 			link: 'https://amirzenoozi.medium.com/decoding-persian-news-unleashing-the-power-of-analytics-86868be4756b',
 			title: 'Decoding Persian News: Unleashing the Power of Analytics',

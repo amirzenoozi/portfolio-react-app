@@ -3,7 +3,7 @@ import Container from '@/components/container';
 import FlexRow from '@/components/flex-row';
 import FlexCol from '@/components/flex-col';
 import { ClassNames } from '@/modules/classNames';
-import { MediumCard } from './medium.interface';
+import { MediumCard } from './type';
 import './medium.style.scss';
 
 

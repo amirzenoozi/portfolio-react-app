@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Container from '@/components/container';
-import { Experience } from './experience.interface';
+import { Experience } from './type';
 import Icon from '@icon-park/react/es/all';
 import './experience.style.scss';
 import { ClassNames } from '@/modules/classNames';

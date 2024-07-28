@@ -7,7 +7,6 @@ import { MediumCard } from './type';
 import './medium.style.scss';
 
 
-
 function MediumSection() {
 	const CN = new ClassNames('medium');
 	const blogNewsList: Array<MediumCard> = [
@@ -46,12 +45,13 @@ function MediumSection() {
 		<section className={CN.generate('')}>
 			<Container>
 				<FlexRow stretch={true}>
-					{blogNewsList.map((item: MediumCard) => (
+					{blogNewsList.map((item: MediumCard, index: number) => (
 						<FlexCol
 							xs={24}
 							sm={12}
 							md={8}
 							xl={6}
+							key={index}
 						>
 							<a
 								className={CN.generate('card')}

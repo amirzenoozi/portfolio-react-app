@@ -1,13 +1,13 @@
 import React from 'react';
 import Icon from '@icon-park/react/es/all';
-import Container from '../../../../components/container';
-import FlexRow from '../../../../components/flex-row';
-import FlexCol from '../../../../components/flex-col';
-import Hyperlink from '../../../../components/hyperlink';
-import Linkedin from '../../../../icons/linkedin';
-import links from '../../../../constants/links.json';
+import Container from '@/components/container';
+import FlexRow from '@/components/flex-row';
+import FlexCol from '@/components/flex-col';
+import Hyperlink from '@/components/hyperlink';
+import Linkedin from '@/icons/linkedin';
+import links from '@/constants/links.json';
 import './hero.style.scss';
-import { ClassNames } from '../../../../modules/classNames';
+import { ClassNames } from '@/modules/classNames';
 
 
 

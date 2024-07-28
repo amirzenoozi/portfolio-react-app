@@ -4,57 +4,59 @@ import Home from './pages/home';
 import Error from './pages/error';
 import Layout from './pages/layout';
 import Skills from './pages/skills';
-import Gallery from './pages/gallery';
 import reportWebVitals from './reportWebVitals';
 import AnimatedCursor from 'react-animated-cursor';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom';
 import { Tooltip } from 'react-tooltip';
 import '@icon-park/react/styles/index.css';
 import './index.css';
 import './i18n';
+import { Provider } from 'react-redux';
+import { store } from '@/store';
 
 const router = createBrowserRouter([
-    {
-        element: <Layout />,
-        children: [
-            {
-                path: "/",
-                element: <Home />,
-                errorElement: <Error />,
-            },
-            {
-                path: "/skills",
-                element: <Skills />,
-                errorElement: <Error />,
-            },
-            {
-                path: "/gallery",
-                element: <Gallery />,
-                errorElement: <Error />,
-            },
-        ],
-    },
-    {
-        path: "/error",
-        element: <Error />,
-        errorElement: <Error />,
-    },
-    {
-        path: "*",
-        element: <Error />,
-        errorElement: <Error />,
-    },
+	{
+		element: <Layout/>,
+		children: [
+			{
+				path: "/",
+				element: <Navigate to="/en" replace />,
+			},
+			{
+				path: '/:lng',
+				element: <Home/>,
+				errorElement: <Error/>,
+			},
+			{
+				path: '/:lng/skills',
+				element: <Skills/>,
+				errorElement: <Error/>,
+			},
+		],
+	},
+	{
+		path: '/error',
+		element: <Error/>,
+		errorElement: <Error/>,
+	},
+	{
+		path: '*',
+		element: <Error/>,
+		errorElement: <Error/>,
+	},
 ]);
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+	document.getElementById('root') as HTMLElement
 );
 root.render(
-  <React.StrictMode>
-      <RouterProvider router={router} />
-      <AnimatedCursor />
-      <Tooltip id="tooltip-area" />
-  </React.StrictMode>
+	<Provider store={store}>
+		<React.StrictMode>
+			<RouterProvider router={router}/>
+			<AnimatedCursor/>
+			<Tooltip id="tooltip-area"/>
+		</React.StrictMode>
+	</Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -7,9 +7,9 @@ i18n.use(Backend)
 	.init(
 		{
 			lng: 'en',
-			fallbackLng: ['en', 'fa'],
+			fallbackLng: ['en'],
 			debug: false,
-			ns: ['common', 'home', 'experience'],
+			ns: ['common', 'experience'],
 			defaultNS: 'common',
 			interpolation: {
 				escapeValue: false,

@@ -303,10 +303,24 @@
         box-sizing: border-box;
 
         > figure {
+            position: relative;
             overflow: hidden;
             border-radius: px-to-rem(8);
             font-size: 0;
             margin-bottom: px-to-rem(8);
+            width: 100%;
+            padding-top: 56.24%;
+            background-color: rgba(0, 0, 0, 0.2);
+
+            > img {
+                display: block;
+                height: 100%;
+                width: auto;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
         }
         > h3 {
             font-size: px-to-rem(18);

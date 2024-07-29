@@ -1,20 +1,10 @@
 import React from 'react';
-import Icon, {IconType} from '@icon-park/react/es/all';
+import Icon from '@icon-park/react/es/all';
 import './style.scss';
+import { BtnProps } from '@/components/btn/type';
+import { ClassNames } from '@/modules/classNames';
 
-interface FlexRowProps {
-	text?: string;
-	variant?: 'primary-dark' | 'primary-light' | 'secondary' | 'ghost-dark' | 'ghost-light' | 'linear-light';
-	icon?: boolean;
-	iconName?: IconType;
-	iconPosition?: 'left' | 'right';
-	type?: 'button' | 'submit' | 'reset';
-	size?: number;
-	to?: string;
-	disable?: boolean;
-}
-
-const Btn: React.FC<FlexRowProps> = ({
+const Btn: React.FC<BtnProps> = ({
 	text = '',
 	variant = 'primary',
 	icon = false,
@@ -26,6 +16,18 @@ const Btn: React.FC<FlexRowProps> = ({
 	to = '',
 	...props
 }) => {
+	const CN = new ClassNames('btn');
+
+	const BtnClassGenerator = (variant: string, icon: boolean, iconName: string, iconPosition: string, disable: boolean) => {
+		return CN.generate('', [
+			variant,
+			...(iconPosition === 'left') ? ['prepend'] : [],
+			...(iconPosition === 'right') ? ['append'] : [],
+			...icon ? ['icon'] : [],
+			...disable ? ['disable'] : [],
+		])
+	};
+
 	return (
 		<button
 			className={BtnClassGenerator(variant, icon, iconName, iconPosition, disable)}
@@ -39,18 +41,6 @@ const Btn: React.FC<FlexRowProps> = ({
 			{!icon && iconName && iconPosition === 'right' && <Icon type={iconName} theme="filled" size={size} />}
 		</button>
 	);
-}
-
-const BtnClassGenerator = (variant: string, icon: boolean, iconName: string, iconPosition: string, disable: boolean) => {
-	let classes = [
-		'btn',
-		`btn--${variant}`,
-		iconPosition === 'left' && 'btn--prepend',
-		iconPosition === 'right' && 'btn--append',
-		disable && 'btn--disabled',
-		icon && 'btn--icon',
-	];
-	return classes.join(' ');
 }
 
 export default Btn;

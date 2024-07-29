@@ -1,3 +1,7 @@
+interface Modifier {
+	[key: string]: boolean;
+}
+
 export class ClassNames {
 	private block: string;
 
@@ -5,7 +9,7 @@ export class ClassNames {
 		this.block = block;
 	}
 
-	generate(element: string = '', modifiers: string[] = []): string {
+	generate(element: string = '', modifiers: (string | Modifier)[] = []): string {
 		let className = this.block;
 
 		if (element) {
@@ -13,8 +17,15 @@ export class ClassNames {
 		}
 
 		modifiers.forEach(modifier => {
-			if (modifier) {
-				className += ` ${this.block}${element ? `__${element}` : ''}--${modifier}`;
+			if (typeof modifier === 'object') {
+				const key = Object.keys(modifier)[0];
+				if (modifier[key]) {
+					className += ` ${this.block}${element ? `__${element}` : ''}--${key}`;
+				}
+			} else if (typeof modifier === 'string') {
+				if (modifier) {
+					className += ` ${this.block}${element ? `__${element}` : ''}--${modifier}`;
+				}
 			}
 		});
 

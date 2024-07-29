@@ -1,20 +1,7 @@
 import React from 'react';
-import {IconType} from '@icon-park/react/es/all';
+import { HyperlinkProps } from '@/components/hyperlink/type';
 import './style.scss';
-
-interface HyperlinkProps {
-	text?: string;
-	variant?: 'primary-dark' | 'primary-light' | 'secondary' | 'ghost-dark' | 'ghost-light' | 'linear-light';
-	icon?: boolean;
-	iconName?: IconType;
-	iconPosition?: 'left' | 'right';
-	type?: 'button' | 'submit' | 'reset';
-	size?: number;
-	to?: string;
-	target?: '_blank' | '_self' | '_parent' | '_top';
-	children?: React.ReactNode;
-	props?: any;
-}
+import { ClassNames } from '@/modules/classNames';
 
 const Hyperlink: React.FC<HyperlinkProps> = ({
 	text = '',
@@ -29,6 +16,17 @@ const Hyperlink: React.FC<HyperlinkProps> = ({
 	children,
 	...props
 }) => {
+	const CN = new ClassNames('hyperlink');
+
+	const BtnClassGenerator = (variant: string, icon: boolean, iconName: string, iconPosition: string) => {
+		return CN.generate('', [
+			variant,
+			...(iconPosition === 'left') ? ['prepend'] : [],
+			...(iconPosition === 'right') ? ['append'] : [],
+			...icon ? ['icon'] : [],
+		])
+	};
+
 	return (
 		<a
 			className={BtnClassGenerator(variant, icon, iconName, iconPosition)}
@@ -40,17 +38,6 @@ const Hyperlink: React.FC<HyperlinkProps> = ({
 			{children}
 		</a>
 	);
-}
-
-const BtnClassGenerator = (variant: string, icon: boolean, iconName: string, iconPosition: string) => {
-	let classes = [
-		'hyperlink',
-		`hyperlink--${variant}`,
-		iconPosition === 'left' && 'hyperlink--prepend',
-		iconPosition === 'right' && 'hyperlink--append',
-		icon && 'hyperlink--icon',
-	];
-	return classes.join(' ');
 }
 
 export default Hyperlink;

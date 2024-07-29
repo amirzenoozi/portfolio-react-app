@@ -4,7 +4,7 @@ const api = new HttpClient('')
 
 const getLatestMediums = async () => {
 	try {
-		const { data } = await api.get('https://medium.com/feed/@amirzenoozi')
+		const { data } = await api.get('https://v1.nocodeapi.com/amirzenoozi/medium/pdcAABzgJCHbJnoJ')
 		return data
 	} catch (err: any) {
 		console.log('Error', err)

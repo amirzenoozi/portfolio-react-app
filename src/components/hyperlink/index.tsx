@@ -1,7 +1,7 @@
 import React from 'react';
 import { HyperlinkProps } from '@/components/hyperlink/type';
-import './style.scss';
 import { ClassNames } from '@/modules/classNames';
+import './style.scss';
 
 const Hyperlink: React.FC<HyperlinkProps> = ({
 	text = '',
